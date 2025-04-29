@@ -11,63 +11,6 @@ def my_fixture():
 @pytest.mark.usefixtures("oneTimeSetup")
 class TestApiProducts():
 
-    # apiUri = "http://localhost:3030/products"
-    # PostHeader = {
-    #     "Accept": "application/json",
-    #     "Content-type": "application/json"
-    # }
-    #
-    # PostPayload = {
-    #     "name": "Necklace set",
-    #     "type": "Jewellery",
-    #     "price": 280,
-    #     "shipping": 20,
-    #     "upc": "021333422019",
-    #     "description": "Diamond Platinum necklace",
-    #     "manufacturer": "KJewelers",
-    #     "model": "NC1400DPZ",
-    #     "url": "http://www.bestbuy.com/",
-    #     "image": "http://img.bbystatic.com/BestBuy_US/images/products/1111/1111_sa.jpg"
-    # }
-    # limit = 2
-    # skip = 0
-    # getApiUrl = f"http://localhost:3030/products?$limit={limit}&$skip={skip}"
-    #
-    # getHeader = {
-    #     "Accept": "application/json"
-    # }
-
-
-    # getSPbaseUrl = "http://localhost:3030/products/"
-    #
-    # getSPHeader = {
-    #     "Accept": "application/json"
-    # }
-    # patchBaseUrl = "http://localhost:3030/products/"
-    # patchheader = {
-    #     "Accept": "application/json",
-    #     "Content-type": "application/json"
-    # }
-    #
-    # patchData = {
-    #     "id": "123",
-    #     "name": "Necklace set No ",
-    #     "type": "Jewellery",
-    #     "price": 280,
-    #     "upc": "021333422019",
-    #     "shipping": 10,
-    #     "description": "Diamond Platinum necklace",
-    #     "manufacturer": "KJewelers and KC",
-    #     "model": "NC1400DPZ",
-    #     "url": "http://www.bestbuy.com/",
-    #     "image": "http://img.bbystatic.com/BestBuy_US/images/products/1111/1111_sa.jpg",
-    #
-    # }
-    # deleteBaseUrl = "http://localhost:3030/products/"
-    # deleteHeader = {"Accept": "application/json"}
-
-
-
 
     # Class specific implementation such as creation of ModuleObject Class
     @pytest.fixture(autouse=True)
@@ -82,7 +25,7 @@ class TestApiProducts():
         self.getHeader = data["getHeader"]
         self.limit = data["limit"]
         self.skip = data["skip"]
-        
+
         self.response = self.ap.getDataForAllProducts(self.getApiUrl, self.getHeader, self.limit, self.skip)
         # Validating proper response code as 200 for successful operation
         assert self.response.status_code == 200
