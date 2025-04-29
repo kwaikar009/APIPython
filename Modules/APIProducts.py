@@ -1,14 +1,11 @@
 import json
 import requests
 
-class ApiProducts():
-
-
+class ApiProducts:
     # Different API method calls for CRUD operations for Product category
     def addNewProduct(self,Url,header,data):
         response =requests.post(url=Url,json=data,headers=header)
         return response
-
 
     def getDataForAllProducts(self,baseUrl,header,limit,skip):
         baseUrl= baseUrl + f"?$limit={limit}&$skip={skip}"
