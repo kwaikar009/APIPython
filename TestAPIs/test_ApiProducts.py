@@ -10,8 +10,6 @@ def my_fixture():
 
 @pytest.mark.usefixtures("oneTimeSetup")
 class TestApiProducts():
-
-
     # Class specific implementation such as creation of ModuleObject Class
     @pytest.fixture(autouse=True)
     def classSetUp(self):

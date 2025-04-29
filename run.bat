@@ -1,0 +1,1 @@
+ pytest -v -s ./TestAPIs/test_ApiProducts.py
