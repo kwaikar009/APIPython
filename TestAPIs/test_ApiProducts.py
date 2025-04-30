@@ -1,4 +1,4 @@
-from Modules.APIProducts import ApiProducts
+from APIModules.APIProducts import ApiProducts
 import pytest
 import json
 
